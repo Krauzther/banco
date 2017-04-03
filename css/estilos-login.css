@@ -5,13 +5,23 @@
 }
 .barra-superior {
     background-color: black;
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 22px;
+    align-items: center;*/
     padding: 0 29px;
     color: white;
     font-size: .8em;
+}
+
+.nav-bar__img {
+    display: block;
+    width: 100%;
+    height: 86px;
+}
+
+.barra-menu {
+    max-height: 86px;
+    overflow: hidden;
 }
 
 .menu {
@@ -43,4 +53,34 @@
 .menu__link:hover {
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 767px) {
+    .nav-bar__img {
+        min-width: 1000px;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-bar__img {
+        min-width: 900px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-bar__img {
+        min-width: 700px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-bar__img {
+        min-width: 500px;
+    }
+}
+
+@media (max-width: 300px) {
+    .nav-bar__img {
+        min-width: 400px;
+    }
 }
