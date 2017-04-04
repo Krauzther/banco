@@ -3,14 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 .barra-superior {
-    background-color: black;
-    /*display: flex;
-    justify-content: space-between;
-    align-items: center;*/
-    padding: 0 29px;
-    color: white;
-    font-size: .8em;
+   background-color: black;
+   color:  white;
 }
 
 .nav-bar__img {
@@ -27,31 +23,29 @@
 .menu {
     list-style: none;
     display: flex;
-    height: 80%;
+    flex-wrap: wrap;
+    margin-top: 20px;
     margin-bottom: 0;
 }
 
 .menu__item {
-    border-right: 1px solid white;
-    height: 100%;
+    width: 50%;
+    height: 22px;
 }
 
 .menu__item:last-child {
-    border-right: none;
+    
 }
 
 .menu__link {
     display: block;
-    height: 100%;
     width: 100%;
-    padding: 0 10px;
+    height: 100%;
     color: white;
-    font-size: .8rem;
-    line-height: 17.5px;
 }
 
 .menu__link:hover {
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
 }
 
@@ -79,8 +73,24 @@
     }
 }
 
-@media (max-width: 300px) {
-    .nav-bar__img {
-        min-width: 400px;
-    }
+/* Login */
+
+.contenedor-form-login {
+    background-color: rgba(47, 64, 89, 0.4);
+    max-width: 210px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0; 
+}
+
+.form-login {
+    padding: 24px 17px 20px;
+}
+
+.bancanet2-0 {
+    background-color: orange;
+    padding: 15px 0 0 28px;
+}
+.descarga-herramienta {
+    background-color: #fff;
 }
