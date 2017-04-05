@@ -79,7 +79,7 @@
     background-color: rgba(47, 64, 89, 0.4);
     max-width: 210px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 45px;
     border-radius: 10px 10px 0 0; 
 }
 
@@ -90,7 +90,73 @@
 .bancanet2-0 {
     background-color: orange;
     padding: 15px 0 0 28px;
+    overflow: hidden;
 }
 .descarga-herramienta {
     background-color: #fff;
+}
+
+.eres-nuevo {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.eres-nuevo__label {
+    font-size: 12px;
+}
+
+.eres-nuevo__link {
+    font-size: 11px;
+    color: white;
+    background-color: green;
+    padding: 3px 10px;
+}
+
+.eres-nuevo__link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.form-login__item {
+    font-size: 12px;
+    display: block;
+}
+
+.btn-submit {
+    margin-top: 5px;
+    padding: 3px 10px;
+    width: auto;
+    border: none;
+    font-size: 11px;
+    font-family: arial;
+    background-color: #05589D;
+    color: white;
+}
+
+.btn-submit:hover {
+    opacity: .7;
+}
+a.form-login__item {
+    font-size: 12px;
+    color:white;
+    margin-top: 5px;
+}
+a.form-login__item:hover {
+    color: #05589D;
+}
+
+.bancanet2-0__img {
+    float: left;
+}
+
+.bancanet2-0__item1 {
+    font-size: 14px;
+    color: white;
+}
+
+.bancanet2-0__item2 {
+    font-size: 11px;
+    color: white;
+    float: left;
+    width: 77%;
 }
