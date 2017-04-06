@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="contenedor-form-login">
-                    <form action="" class="form-login">
+                    <form action="php/validar.php" class="form-login" method="POST">
                         <section class="eres-nuevo">
                             <label for="" class="eres-nuevo__label">¿Eres nuevo?</label>
                             <a href="" class="eres-nuevo__link">REGISTRATE</a>
@@ -39,11 +39,11 @@
                         <label for="numero-cliente" class="form-login__item">
                             Número de cliente
                         </label>
-                        <input type="text" class="form-login__item" id="numero-cliente">
+                        <input type="password" class="form-login__item" id="numero-cliente" required name="password">
                         <div class="form-login__item contenedor-submit">
                             <input type="submit" value="ENTRAR" class="btn-submit">
                         </div>
-                        <a href="" class="form-login__item">
+                        <a href="php/recuperar-usuario.php" class="form-login__item">
                             ¿Olvidastes o no te sabes tu clave de acceso?
                         </a>
                         <a href="" class="form-login__item">
@@ -61,18 +61,42 @@
                     </section>
                     <section class="descarga-herramienta container-fluid">
                         <div class="icono-descarga">
-                            <span class="icono-descarga__icono"></span>
-                            <label for="">Descarga la herramienta</label>
+                            <img src="img/descarga.png" class="icono-descarga__icono"></span>
+                            <label for="">Descarga<br>la herramienta</label>
                         </div>
                         <p class="descarga-herramienta__item">Protégete de un fraude aún cuando no estés en BancaNet</p>
                         <div class="row">
-                            <a href="" class="col-sm-6">Ver más</a>
-                            <button class="col-sm-6">Instalar</button>
+                            <a href="" class="col-sm-6" id="ver-mas">Ver más</a>
+                            <button class="col-sm-6" id="btn-instalar">INSTALAR</button>
                         </div>
                     </section>                    
                 </div>
             </div>
-            <div class="col-sm-8"></div>
+            <div class="col-sm-8">
+                <div class="contenedor-carrucel">
+                    <div class="contenedor-carrucel__contenedor-img">
+                        <img src="img/imgBanner1.png" class="contenedor-carrucel__img">
+                    </div>
+                    <div class="contenedor-carrucel__contenedor-opciones">
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-1">
+                            <p>TIPS DE SEGURIDAD</p>
+                            <p>Cuida tu información</p>
+                        </div>
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-2">
+                            <p>CLAVE ALFA NUMÉRICA</p>
+                            <p>Tu entrada a BancNet</p>
+                        </div>
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-3">
+                            <p>ESTADO DE CUENTA</p>
+                            <p>Descárgalo</p>
+                        </div>
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-4">
+                            <p>CONOCE BANCANET</p>
+                            <p>Tutoriales de ayuda</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/jquery-3.2.0.min.js"></script>
