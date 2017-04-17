@@ -36,10 +36,6 @@
     height: 22px;
 }
 
-.menu__item:last-child {
-    
-}
-
 .menu__link {
     display: block;
     width: 100%;
@@ -50,6 +46,20 @@
 .menu__link:hover {
     text-decoration: underline;
     color: white;
+}
+@media (min-width: 992px) {
+    .barra-superior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu {
+        margin-top: 0;  
+        width: 60%;      
+    }
+    .menu__item {
+        width: 25%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 767px) {
@@ -205,6 +215,7 @@ a.form-login__item:hover {
     opacity: .7;
 }
 
+/* Carrucel */
 .contenedor-carrucel__contenedor-img {
     max-width: 704px;
     max-height: 416px;
@@ -221,6 +232,7 @@ a.form-login__item:hover {
     display: -ms-flexbox;
     display: flex;
     font-size: 11px;
+    flex-wrap: wrap;
 }
 
 .contenedor-carrucel__opciones {
@@ -233,4 +245,10 @@ a.form-login__item:hover {
 
 .contenedor-carrucel__opciones:hover {
     background-color: rgba(0, 128, 255, 0.5);
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .contenedor-carrucel__opciones {
+        width: 50%;
+    }
 }
