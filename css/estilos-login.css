@@ -252,3 +252,60 @@ a.form-login__item:hover {
         width: 50%;
     }
 }
+
+/* Estamos donde tú estas */
+
+.contenedor-iconos {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 65px;
+}
+
+.link-iconos-azules {
+    display: block;
+    padding: 0 5px;
+    position: relative;
+}
+
+.link-iconos-azules:hover, .link-iconos-azules:hover:after {
+    display: block;
+    opacity: .7;
+}
+
+.link-iconos-azules:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 6px solid navy;
+    border-top: 6px solid transparent;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    transform: translateX(-50%);
+    bottom: -10px;
+    left: 50%;
+    display: none;
+}
+
+.iconos-azules {
+    display: block;
+    width: 70px;
+    height: 86px;
+}
+
+.parrafo-estamos {
+    display: block;
+    margin-top: 65px;
+    margin-bottom: 40px;
+    font-family: arial;
+    font-size: 20px;
+    color: #0c5b88;
+    font-weight: bold;
+}
+
+.barra-azul {
+    background-color: rgb(0, 189, 242);
+    height: 8px;
+    width: 323px;
+}
