@@ -309,3 +309,36 @@ a.form-login__item:hover {
     height: 8px;
     width: 323px;
 }
+
+@media (max-width: 767px) {
+    
+    .contenedor-iconos {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .link-iconos-azules {
+        width: 50%;
+    }
+
+    .link-iconos-azules:hover:after {
+        display: none;
+    }
+}
+
+/* footer */ 
+
+.link-citiban, .link-terminos {
+    display: block;
+    margin-top: 20px;
+}
+
+.link-terminos { 
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    .link-terminos {
+        text-align: left;
+    }
+}
