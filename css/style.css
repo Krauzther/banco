@@ -1,8 +1,12 @@
-#logo {
-    width: 150px;
-}
 
+
+#logo {
+    margin: 0 auto;
+    padding: 0;
+    width: 100px;
+}
 
 form {
     width: 50%;
 }
+
