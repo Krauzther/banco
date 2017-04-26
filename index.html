@@ -28,10 +28,10 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="contenedor-form-login">
-                    <form action="" class="form-login">
+                    <form action="php/validar.php" class="form-login" method="POST">
                         <section class="eres-nuevo">
                             <label for="" class="eres-nuevo__label">¿Eres nuevo?</label>
-                            <a href="" class="eres-nuevo__link">Registrate</a>
+                            <a href="" class="eres-nuevo__link">REGISTRATE</a>
                         </section>
                         <label for="" class="form-login__item">
                             BancaNet
@@ -39,11 +39,11 @@
                         <label for="numero-cliente" class="form-login__item">
                             Número de cliente
                         </label>
-                        <input type="text" class="form-login__item" id="numero-cliente">
+                        <input type="password" class="form-login__item" id="numero-cliente" required name="password">
                         <div class="form-login__item contenedor-submit">
-                            <input type="submit" value="Entrar">
+                            <input type="submit" value="ENTRAR" class="btn-submit">
                         </div>
-                        <a href="" class="form-login__item">
+                        <a href="php/recuperar-usuario.php" class="form-login__item">
                             ¿Olvidastes o no te sabes tu clave de acceso?
                         </a>
                         <a href="" class="form-login__item">
@@ -51,31 +51,102 @@
                         </a>
                     </form>
                     <section class="bancanet2-0">
-                        <img src="img/flecha.png">
-                        <label for="" class="bancanet2-0__item">
+                        <img src="img/flecha.png" class="bancanet2-0__img">
+                        <label for="" class="bancanet2-0__item1">
                             BancaNet 2.0
                         </label>
-                        <label for="" class="bancanet2-0__item">
+                        <label for="" class="bancanet2-0__item2">
                             Si prefieres usar la versión anterior da clic aquí.
                         </label>
                     </section>
                     <section class="descarga-herramienta container-fluid">
                         <div class="icono-descarga">
-                            <span class="icono-descarga__icono"></span>
-                            <label for="">Descarga la herramienta</label>
+                            <img src="img/descarga.png" class="icono-descarga__icono"></span>
+                            <label for="">Descarga<br>la herramienta</label>
                         </div>
                         <p class="descarga-herramienta__item">Protégete de un fraude aún cuando no estés en BancaNet</p>
                         <div class="row">
-                            <a href="" class="col-sm-6">Ver más</a>
-                            <button class="col-sm-6">Instalar</button>
+                            <a href="" class="col-sm-6" id="ver-mas">Ver más</a>
+                            <button class="col-sm-6" id="btn-instalar">INSTALAR</button>
                         </div>
                     </section>                    
                 </div>
             </div>
-            <div class="col-sm-8"></div>
+            <div class="col-sm-8">
+                <div class="contenedor-carrucel">
+                    <div class="contenedor-carrucel__contenedor-img">
+                        <img src="img/imgBanner1.png" class="contenedor-carrucel__img">
+                    </div>
+                    <div class="contenedor-carrucel__contenedor-opciones">
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-1">
+                            <p>TIPS DE SEGURIDAD</p>
+                            <p>Cuida tu información</p>
+                        </div>
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-2">
+                            <p>CLAVE ALFA NUMÉRICA</p>
+                            <p>Tu entrada a BancNet</p>
+                        </div>
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-3">
+                            <p>ESTADO DE CUENTA</p>
+                            <p>Descárgalo</p>
+                        </div>
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-4">
+                            <p>CONOCE BANCANET</p>
+                            <p>Tutoriales de ayuda</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row contenedor-seccion-estamos">
+            <div class="col-sm-4">
+                <p class="parrafo-estamos"><strong>Estamos donde tú estás.</strong></p>
+                <div class="barra-azul">
+
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="contenedor-iconos">
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon1.png" alt="" class="img-1 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon2.png" alt="" class="img-2 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon3.png" alt="" class="img-3 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon4.png" alt="" class="img-4 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon5.png" alt="" class="img-5 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon6.png" alt="" class="img-6 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon7.png" alt="" class="img-7 iconos-azules">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="terminos-condiciones">
+                    <div class="col-sm-6">
+                        <a href="" class="link-citiban">CITIBANAMEX.COM</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="" class="link-terminos">TERMINOS, CONDICIONES DE USO Y PRIVACIDAD</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row"></div>
         </div>
     </div>
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/banner-login.js"></script>
 </body>
 </html>
