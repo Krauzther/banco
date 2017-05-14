@@ -1,3 +1,37 @@
+
+<?php
+    require "php/BaseDatos.php";
+    require "php/sesion.php";
+
+    iniciarSesion();
+    $ncliente = "";
+    if (validarExistenciaSesion("ncliente")) {
+        $ncliente = obtenerValorSesion("ncliente");
+    } else {
+        header("location: index.html");
+    }
+
+    $bd = new BaseDatos();
+    $bd->realizarConexion();
+    $query = "SELECT apaterno, amaterno, nombre FROM cliente WHERE ncliente = $ncliente";
+    $resultado = $bd->realizarConsulta($query);
+    $fila = $resultado->fetch_array(MYSQLI_BOTH);
+    $nombreCliente = ocultarNombre($fila[2]) . " " . ocultarNombre($fila[0]) . " " . ocultarNombre($fila[1]);
+    $bd->cerrarConexion();
+
+    function ocultarNombre($nombre) {
+        $numeroPalabras = explode(" ", $nombre);
+        $nombreTmp = "";
+        for ($i = 0; $i < count($numeroPalabras); $i++) {
+            $nombreTmp .= substr($numeroPalabras[$i], 0, 1);
+            for($j = 1; $j < strlen($numeroPalabras[$i]); $j++) {
+                $nombreTmp .= "*";
+            }
+            $nombreTmp .= " ";
+        }
+        return trim($nombreTmp);         
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,22 +62,22 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="contenedor-form-login">
-                    <form action="php/validar.php" class="form-login" id = "form-login-cliente" method="POST">
+                    <form action="" class="form-login" method="POST" id = "form-login-clave">
                         <section class="eres-nuevo">
-                            <label for="" class="eres-nuevo__label">¿Eres nuevo?</label>
-                            <a href="" class="eres-nuevo__link">REGISTRATE</a>
+                            <label for="" class="eres-nuevo__label">Bienvenido</label>
+                            <label for="" class="eres-nuevo__label" id="nombre-usuario"><?php echo $nombreCliente ?></label>
                         </section>
                         <label for="" class="form-login__item">
                             BancaNet
                         </label>
                         <label for="numero-cliente" class="form-login__item">
-                            Número de cliente
+                            Clave de acceso
                         </label>
-                        <input type="password" class="form-login__item" id="numero-cliente" required name="password">
+                        <input type="password" class="form-login__item" id="clave-cliente" required name="password">
                         <div class="form-login__item contenedor-submit">
                             <input type="submit" value="ENTRAR" class="btn-submit">
                         </div>
-                        <a href="" class="form-login__item" id="link-recuperar-usuario">
+                        <a href="php/recuperar-usuario.php" class="form-login__item">
                             ¿Olvidastes o no te sabes tu clave de acceso?
                         </a>
                         <a href="" class="form-login__item">
@@ -145,47 +179,23 @@
             <div class="row"></div>
         </div>
     </div>
+
     <!--Modal-->
     
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="modal-mensajes">
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modal-title"></h4>
+                <h4 class="modal-title" id="gridSystemModalLabel"></h4>
             </div>
             <div class="modal-body">
-                <p id="modal-mensaje-p"></p>
+                <p class="modal-mensaje"></p>
             </div>
         </div>
     </div>
     </div>
 
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="modal-recuperar-usuario">
-    <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="gridSystemModalLabel">Ingrese el correo registrado en el banco</h4>
-            </div>
-            <div class="modal-body">
-                <form action="" id="form-recupera-usuario">
-                    <div class="form-group">
-                        <label class="control-label" for="inputGroupSuccess1">Correo</label>
-                        <div class="input-group">
-                            <span class="input-group-addon">@</span>
-                            <input type="email" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" required>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-primary" form="form-recupera-usuario">Enviar</button>
-            </div>
-        </div>
-    </div>
-    </div>
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/banner-login.js"></script>
