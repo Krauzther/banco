@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Kevin Chavez">
+    <meta name="description" content="Perfil">
+    <title>Bienvenido</title>
+    
+    <!--Bootstrap y otros estilos-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <!--Estilo construcción-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Desplegar navegación</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img id="logo" src="img/citibanamex.png"></a>
+        </div>
+
+        <!-- Enlaces de navegación, y elementos que se puedan ocultar al minimizar la barra de navegación -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">SALDOS</a></li>
+                <li><a href="#">TRANSFERENCIAS Y PAGOS</a></li>
+                <li><a href="#">INVERSIONES</a></li>
+                <li><a href="#">AFORE</a></li>
+                <li><a href="#">CONFIGURACIÓN</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                <input type="text" class="form-control" placeholder="Buscar">
+                </div>
+                <button type="submit" class="btn btn-default">Enviar</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        PERFIL <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Claves de acceso</a></li>
+                        <li><a href="#">Registra datos de contacto</a></li>
+                        <li><a href="#">Actualiza datos de contacto</a></li>
+                        <li><a href="contrato.pdf">Ver contrato de Banca Electrónica</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">SALIR</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+</body>
+</html>
