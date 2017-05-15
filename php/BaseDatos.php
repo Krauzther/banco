@@ -4,8 +4,8 @@
     private $conexion;
      
     public function realizarConexion() {
-      //$this->conexion = new mysqli("localhost","root","","banco");
-      $this->conexion = new mysqli("mysql.hostinger.mx","u279435612_userb","b12345","u279435612_banco");
+      $this->conexion = new mysqli("localhost","root","","banco");
+      //$this->conexion = new mysqli("mysql.hostinger.mx","u279435612_userb","b12345","u279435612_banco");
       if ($this->conexion->connect_errno) {
         echo "<script>alert('No hay conexión con los datos, consulte con el administrador.')</script>";
       }

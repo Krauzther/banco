@@ -77,7 +77,7 @@
                         <div class="form-login__item contenedor-submit">
                             <input type="submit" value="ENTRAR" class="btn-submit">
                         </div>
-                        <a href="php/recuperar-usuario.php" class="form-login__item">
+                        <a href="" class="form-login__item" id="link-recuperar-clave">
                             ¿Olvidastes o no te sabes tu clave de acceso?
                         </a>
                         <a href="" class="form-login__item">
@@ -182,15 +182,15 @@
 
     <!--Modal-->
     
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="modal-mensajes">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="gridSystemModalLabel"></h4>
+                <h4 class="modal-title" id="modal-title"></h4>
             </div>
             <div class="modal-body">
-                <p class="modal-mensaje"></p>
+                <p id="modal-mensaje-p"></p>
             </div>
         </div>
     </div>

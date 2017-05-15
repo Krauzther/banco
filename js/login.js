@@ -31,7 +31,27 @@ $(function(){
         e.preventDefault();
         mostrarModalRecuperarUsuairo();
     })
+
+    $("#link-recuperar-clave").click(function(e) {
+        e.preventDefault();
+        recuperarClaveDeAcceso();
+    })
 })
+
+function recuperarClaveDeAcceso() {
+    $.ajax({
+        method: "POST",
+        url: "php/recuperar-usuario.php",
+        data: { opcion : 1}
+    })
+    .done(function( msg ) {
+        if (msg.resultado) {
+            mostrarMensaje("Recuperar clave de acceso", "Su clave de acceso se envió a su correo.");
+        } else {
+            mostrarMensaje("Recuperar clave de acceso", "Ocurrió un error, no fue posible recuperar su clave de acceso.");
+        }       
+    });
+}
 
 function recuperarNumeroDeUsuario(correo) {
      $.ajax({
