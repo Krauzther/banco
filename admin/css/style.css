@@ -22,3 +22,16 @@
 section {
     width: 90%;
 }
+
+.container-reg {
+    background-color: rgba(47, 64, 89, 0.4);
+    max-width: 100%px;
+    margin: auto;
+    margin-top: 45px;
+    border-radius: 10px 10px 0 0; 
+}
+
+.form-reg {
+    padding: 24px 17px 20px;
+    
+}

@@ -2,142 +2,175 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Kevin Chavez">
-    <meta name="description" content="Registro de usuarios">
-    <title>Nuevo usuario</title>
-    
-    <!--Bootstrap y otros estilos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nuevo Usuario</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
-    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
-    
-    <!--Estilo construcción-->
+    <link rel="stylesheet" href="../css/estilos-login.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="row top-nav">
-        <div class="col-sm-6 col-md-6 slogan text-top-nav">El Banco Nacional de México</div>
-        <div class="col-sm-6 col-md-6">
-            <a class="text-top-nav" href="#">English</a>
-            <div class="text-top-nav"></div>
+    <div class="container">        
+        <div class="contenedor-nav">
+            <div class="barra-superior">
+                <div class="fecha-hora">Miercoles 29 de Marzo de 2017, 12:08:03</div>
+                <ul class="menu">                
+                    <li class="menu__item"><a href="" class="menu__link">ENGLIS</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">SUCURSALES</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">CONTÁCTANOS</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">AYUDA</a></li>
+                </ul>
+            </div>           
+            <nav class="barra-menu">
+                <img src="../img/imgMenu.png" class="nav-bar__img">
+                <a href="" class="nav-bar__link"></a>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="container-reg">
+                    <form action="php/registrar.php" class="form-reg" method="POST">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="ncliente">Número de Cliente:</label>
+                            <div class="col-sm-10 col-md-10">
+                                <input type="text" class="form-control" id="ncliente" placeholder="Ingresar número de cliente" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="apaterno">Apellido Paterno:</label>
+                            <div class="col-sm-10 col-md-5">
+                                <input type="text" class="form-control" id="apaterno" placeholder="Apellido Paterno"  required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="amaterno">Apellido Materno:</label>
+                            <div class="col-sm-10 col-md-5">
+                                <input type="text" class="form-control" id="amaterno" placeholder="Apellido Materno"  required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="nombre">Nombre(s):</label>
+                            <div class="col-sm-10 col-md-5">
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre(s)" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="fnacimiento">Fecha de nacimiento:</label>
+                            <div class="col-sm-10 col-md-5">
+                                <input type="date" class="form-control" id="fnacimiento" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Correo:</label>
+                            <div class="col-sm-10 col-md-5">
+                                <input type="email" class="form-control" id="email" placeholder="ejemplo@algo.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">Contraseña:</label>
+                            <div class="col-sm-10 col-md-5"> 
+                                <input type="password" class="form-control" id="pwd" placeholder="Ingresar Contraseña" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="re-pwd">Repetir Contraseña:</label>
+                            <div class="col-sm-10 col-md-5"> 
+                                <input type="password" class="form-control" id="re-pwd" placeholder="Repetir Contraseña" required>
+                            </div>
+                        </div>
+                        <div class="form-group"> 
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <section class="descarga-herramienta container-fluid">
+                        <div class="icono-descarga">
+                            <img src="img/descarga.png" class="icono-descarga__icono">
+                            <label for="">Descarga<br>la herramienta</label>
+                        </div>
+                        <p class="descarga-herramienta__item">Protégete de un fraude aún cuando no estés en BancaNet</p>
+                        <div class="row">
+                            <a href="" class="col-sm-6" id="ver-mas">Ver más</a>
+                            <button class="col-sm-6" id="btn-instalar">INSTALAR</button>
+                        </div>
+                    </section>                    
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="contenedor-carrucel">
+                    <div class="contenedor-carrucel__contenedor-img">
+                        <img src="img/imgBanner1.png" class="contenedor-carrucel__img">
+                    </div>
+                    <div class="contenedor-carrucel__contenedor-opciones">
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-1">
+                            <p>TIPS DE SEGURIDAD</p>
+                            <p>Cuida tu información</p>
+                        </div>
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-2">
+                            <p>CLAVE ALFA NUMÉRICA</p>
+                            <p>Tu entrada a BancNet</p>
+                        </div>
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-3">
+                            <p>ESTADO DE CUENTA</p>
+                            <p>Descárgalo</p>
+                        </div>
+                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-4">
+                            <p>CONOCE BANCANET</p>
+                            <p>Tutoriales de ayuda</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row contenedor-seccion-estamos">
+            <div class="col-sm-4">
+                <p class="parrafo-estamos"><strong>Estamos donde tú estás.</strong></p>
+                <div class="barra-azul">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="contenedor-iconos">
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon1.png" alt="" class="img-1 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon2.png" alt="" class="img-2 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon3.png" alt="" class="img-3 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon4.png" alt="" class="img-4 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon5.png" alt="" class="img-5 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon6.png" alt="" class="img-6 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon7.png" alt="" class="img-7 iconos-azules">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="terminos-condiciones">
+                    <div class="col-sm-6">
+                        <a href="" class="link-citiban">CITIBANAMEX.COM</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="" class="link-terminos">TERMINOSS, CONDICIONES DE USO Y PRIVACIDAD</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row"></div>
         </div>
     </div>
-    <nav class="navbar" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Desplegar navegación</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../"><img id="logo" src="../img/citibanamex.png"></a>
-        </div>
-
-        <!-- Enlaces de navegación, y elementos que se puedan ocultar al minimizar la barra de navegación -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        PERSONAS <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="registro.html">Nueva</a></li>
-                        <li><a href="#">Actualizar información</a></li>
-                        <li><a href="#">Dar de baja</a></li>
-                        <li><a href="#">Consultar</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">SEGUROS</a></li>
-                <li><a href="#">PYMES</a></li>
-                <li><a href="#">EMPRESAS Y GOBIERNO</a></li>
-            </ul>
-
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                <input type="text" class="form-control" placeholder="Buscar">
-                </div>
-                <button type="submit" class="btn btn-default">Enviar</button>
-            </form>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">ECONOMÍA Y FINANZAS</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        TU BANCO EN LÍNEA <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Bancanet</a></li>
-                        <li><a href="#">Bancanet Empresarial</a></li>
-                        <li><a href="#">Factura Electrónica Banamex</a></li>
-                        <li><a href="#">AcciTrade</a></li>
-                        <li><a href="#">CitiDirect</a></li>
-                        <li><a href="#">CitiFX Pulse</a></li>
-                        <li><a href="#">SEF Electrónico</a></li>
-                        <li><a href="#">Depósito Electrónico</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <section>
-        <form class="form-horizontal">
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="ncliente">Número de Cliente:</label>
-                <div class="col-sm-10 col-md-5">
-                    <input type="text" class="form-control" id="ncliente" placeholder="Ingresar número de cliente" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="apaterno">Apellido Paterno:</label>
-                <div class="col-sm-10 col-md-5">
-                    <input type="text" class="form-control" id="apaterno" placeholder="Apellido Paterno"  required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="amaterno">Apellido Materno:</label>
-                <div class="col-sm-10 col-md-5">
-                    <input type="text" class="form-control" id="amaterno" placeholder="Apellido Materno"  required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="nombre">Nombre(s):</label>
-                <div class="col-sm-10 col-md-5">
-                    <input type="text" class="form-control" id="nombre" placeholder="Nombre(s)" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="fnacimiento">Fecha de nacimiento:</label>
-                <div class="col-sm-10 col-md-5">
-                    <input type="date" class="form-control" id="fnacimiento" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="email">Correo:</label>
-                <div class="col-sm-10 col-md-5">
-                    <input type="email" class="form-control" id="email" placeholder="ejemplo@algo.com" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="pwd">Contraseña:</label>
-                <div class="col-sm-10 col-md-5"> 
-                    <input type="password" class="form-control" id="pwd" placeholder="Ingresar Contraseña" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="re-pwd">Repetir Contraseña:</label>
-                <div class="col-sm-10 col-md-5"> 
-                    <input type="password" class="form-control" id="re-pwd" placeholder="Repetir Contraseña" required>
-                </div>
-            </div>
-            <div class="form-group"> 
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default">Enviar</button>
-                </div>
-            </div>
-        </form>
-    </section>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/banner-login.js"></script>
 </body>
 </html>
