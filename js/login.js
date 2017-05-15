@@ -6,6 +6,12 @@ $(function(){
         e.preventDefault();
         login($("#numero-cliente").val());        
     });
+
+    $("#form-recuperar-usuario").submit(function(e){
+        e.preventDefault();
+        $('#modal-recuperar-usuario').modal('hide'); 
+        recuperarNumeroDeUsuario($("#correo-recuperar-ncliente").val());      
+    });
     
     $("#form-login-clave").submit(function(e){
         e.preventDefault();
@@ -26,6 +32,21 @@ $(function(){
         mostrarModalRecuperarUsuairo();
     })
 })
+
+function recuperarNumeroDeUsuario(correo) {
+     $.ajax({
+        method: "POST",
+        url: "php/recuperar-usuario.php",
+        data: { opcion : 0 , correo : correo}
+    })
+    .done(function( msg ) {
+        if (msg.resultado) {
+            mostrarMensaje("Recuperar número de cliente", "Su número de cliente se envió a su correo.");
+        } else {
+           mostrarMensaje("Recuperar número de cliente", "El correo proporcionado no es un correo registrado.");
+        }       
+    });
+}
 
 function bloquearUsuario() {
     $.ajax({
