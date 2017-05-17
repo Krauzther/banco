@@ -13,7 +13,7 @@
     <div class="container">        
         <div class="contenedor-nav">
             <div class="barra-superior">
-                <div class="fecha-hora">Miercoles 29 de Marzo de 2017, 12:08:03</div>
+                <div class="fecha-hora">Miercoles 17 de mayo de 2017, 12:08:03</div>
                 <ul class="menu">                
                     <li class="menu__item"><a href="" class="menu__link">ENGLIS</a></li>
                     <li class="menu__item"><a href="" class="menu__link">SUCURSALES</a></li>
@@ -26,100 +26,64 @@
                 <a href="" class="nav-bar__link"></a>
             </nav>
         </div>
-        <div class="row">
+        <div class="row container-reg">
             <div class="col-sm-12">
-                <div class="container-reg">
+                <div class="">
                     <form action="php/registrar.php" class="form-reg" method="POST">
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="ncliente">Número de Cliente:</label>
                             <div class="col-sm-10 col-md-10">
-                                <input type="text" class="form-control" id="ncliente" placeholder="Ingresar número de cliente" required>
+                                <input type="text" class="form-control" id="ncliente" name="ncliente" placeholder="Ingresar número de cliente" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="apaterno">Apellido Paterno:</label>
-                            <div class="col-sm-10 col-md-5">
-                                <input type="text" class="form-control" id="apaterno" placeholder="Apellido Paterno"  required>
+                            <div class="col-sm-10 col-md-10">
+                                <input type="text" class="form-control" id="apaterno" name="apaterno" placeholder="Apellido Paterno"  required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="amaterno">Apellido Materno:</label>
-                            <div class="col-sm-10 col-md-5">
-                                <input type="text" class="form-control" id="amaterno" placeholder="Apellido Materno"  required>
+                            <div class="col-sm-10 col-md-10">
+                                <input type="text" class="form-control" id="amaterno" name="amaterno" placeholder="Apellido Materno"  required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="nombre">Nombre(s):</label>
-                            <div class="col-sm-10 col-md-5">
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre(s)" required>
+                            <div class="col-sm-10 col-md-10">
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre(s)" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="fnacimiento">Fecha de nacimiento:</label>
-                            <div class="col-sm-10 col-md-5">
-                                <input type="date" class="form-control" id="fnacimiento" required>
+                            <div class="col-sm-10 col-md-10">
+                                <input type="date" class="form-control" id="fnacimiento" name="fnacimiento" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="email">Correo:</label>
-                            <div class="col-sm-10 col-md-5">
-                                <input type="email" class="form-control" id="email" placeholder="ejemplo@algo.com" required>
+                            <div class="col-sm-10 col-md-10">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@algo.com" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="pwd">Contraseña:</label>
-                            <div class="col-sm-10 col-md-5"> 
-                                <input type="password" class="form-control" id="pwd" placeholder="Ingresar Contraseña" required>
+                            <div class="col-sm-10 col-md-10"> 
+                                <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Ingresar Contraseña" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="re-pwd">Repetir Contraseña:</label>
-                            <div class="col-sm-10 col-md-5"> 
-                                <input type="password" class="form-control" id="re-pwd" placeholder="Repetir Contraseña" required>
+                            <div class="col-sm-10 col-md-10"> 
+                                <input type="password" class="form-control" id="re-pwd" name="re-pwd" placeholder="Repetir Contraseña" required>
                             </div>
                         </div>
                         <div class="form-group"> 
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">Enviar</button>
+                                <button type="submit" class="eres-nuevo__link">ENVIAR</button>
                             </div>
                         </div>
-                    </form>
-                    <section class="descarga-herramienta container-fluid">
-                        <div class="icono-descarga">
-                            <img src="img/descarga.png" class="icono-descarga__icono">
-                            <label for="">Descarga<br>la herramienta</label>
-                        </div>
-                        <p class="descarga-herramienta__item">Protégete de un fraude aún cuando no estés en BancaNet</p>
-                        <div class="row">
-                            <a href="" class="col-sm-6" id="ver-mas">Ver más</a>
-                            <button class="col-sm-6" id="btn-instalar">INSTALAR</button>
-                        </div>
-                    </section>                    
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="contenedor-carrucel">
-                    <div class="contenedor-carrucel__contenedor-img">
-                        <img src="img/imgBanner1.png" class="contenedor-carrucel__img">
-                    </div>
-                    <div class="contenedor-carrucel__contenedor-opciones">
-                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-1">
-                            <p>TIPS DE SEGURIDAD</p>
-                            <p>Cuida tu información</p>
-                        </div>
-                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-2">
-                            <p>CLAVE ALFA NUMÉRICA</p>
-                            <p>Tu entrada a BancNet</p>
-                        </div>
-                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-3">
-                            <p>ESTADO DE CUENTA</p>
-                            <p>Descárgalo</p>
-                        </div>
-                        <div class="contenedor-carrucel__opciones contenedor-carrucel__opcion-4">
-                            <p>CONOCE BANCANET</p>
-                            <p>Tutoriales de ayuda</p>
-                        </div>
-                    </div>
+                    </form>                  
                 </div>
             </div>
         </div>
@@ -132,25 +96,25 @@
             <div class="col-sm-8">
                 <div class="contenedor-iconos">
                     <a href="" class="link-iconos-azules">
-                        <img src="img/icon1.png" alt="" class="img-1 iconos-azules">
+                        <img src="../img/icon1.png" alt="" class="img-1 iconos-azules">
                     </a>
                     <a href="" class="link-iconos-azules">
-                        <img src="img/icon2.png" alt="" class="img-2 iconos-azules">
+                        <img src="../img/icon2.png" alt="" class="img-2 iconos-azules">
                     </a>
                     <a href="" class="link-iconos-azules">
-                        <img src="img/icon3.png" alt="" class="img-3 iconos-azules">
+                        <img src="../img/icon3.png" alt="" class="img-3 iconos-azules">
                     </a>
                     <a href="" class="link-iconos-azules">
-                        <img src="img/icon4.png" alt="" class="img-4 iconos-azules">
+                        <img src="../img/icon4.png" alt="" class="img-4 iconos-azules">
                     </a>
                     <a href="" class="link-iconos-azules">
-                        <img src="img/icon5.png" alt="" class="img-5 iconos-azules">
+                        <img src="../img/icon5.png" alt="" class="img-5 iconos-azules">
                     </a>
                     <a href="" class="link-iconos-azules">
-                        <img src="img/icon6.png" alt="" class="img-6 iconos-azules">
+                        <img src="../img/icon6.png" alt="" class="img-6 iconos-azules">
                     </a>
                     <a href="" class="link-iconos-azules">
-                        <img src="img/icon7.png" alt="" class="img-7 iconos-azules">
+                        <img src="../img/icon7.png" alt="" class="img-7 iconos-azules">
                     </a>
                 </div>
             </div>
@@ -169,8 +133,5 @@
             <div class="row"></div>
         </div>
     </div>
-    <script src="js/jquery-3.2.0.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/banner-login.js"></script>
 </body>
 </html>
