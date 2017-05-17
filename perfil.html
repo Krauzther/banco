@@ -10,6 +10,8 @@
     
     <!--Bootstrap y otros estilos-->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos-login.css">
+    <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     
@@ -17,19 +19,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Desplegar navegación</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img id="logo" src="img/citibanamex.png"></a>
+    <div class="container">        
+        <div class="contenedor-nav">
+            <div class="barra-superior">
+                <div class="fecha-hora">Miercoles 29 de Marzo de 2017, 12:08:03</div>
+                <ul class="menu">                
+                    <li class="menu__item"><a href="" class="menu__link">ENGLISH</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">SUCURSALES</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">CONTÁCTANOS</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">AYUDA</a></li>
+                </ul>
+            </div>           
+            <nav class="barra-menu">
+                <img src="img/imgMenu.png" class="nav-bar__img">
+                <a href="" class="nav-bar__link"></a>
+            </nav>
         </div>
-
-        <!-- Enlaces de navegación, y elementos que se puedan ocultar al minimizar la barra de navegación -->
+        
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="#">SALDOS</a></li>
@@ -39,17 +45,10 @@
                 <li><a href="#">CONFIGURACIÓN</a></li>
             </ul>
 
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                <input type="text" class="form-control" placeholder="Buscar">
-                </div>
-                <button type="submit" class="btn btn-default">Enviar</button>
-            </form>
-
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        PERFIL <b class="caret"></b>
+                        MI PERFIL <b class="caret bk-black"></b>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Claves de acceso</a></li>
@@ -58,10 +57,104 @@
                         <li><a href="contrato.pdf">Ver contrato de Banca Electrónica</a></li>
                     </ul>
                 </li>
-                <li><a href="#">SALIR</a></li>
+                <li><a href="#" class="bk-black">SALIR</a></li>
             </ul>
         </div>
-    </nav>
+        
+        <div class="row">
+            <div class="col-sm-8 col-md-8">
+                Bienvenido(a) KEVIN LENIN CHAVEZ SANTIAGO
+            </div>
+            <div class="col-sm-8 col-md-8">
+                Bienvenido(a) KEVIN LENIN CHAVEZ SANTIAGO
+            </div>
+        </div>
+        <div class="row contenedor-seccion-estamos">
+            <div class="col-sm-4">
+                <p class="parrafo-estamos"><strong>Estamos donde tú estás.</strong></p>
+                <div class="barra-azul">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="contenedor-iconos">
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon1.png" alt="" class="img-1 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon2.png" alt="" class="img-2 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon3.png" alt="" class="img-3 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon4.png" alt="" class="img-4 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon5.png" alt="" class="img-5 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon6.png" alt="" class="img-6 iconos-azules">
+                    </a>
+                    <a href="" class="link-iconos-azules">
+                        <img src="img/icon7.png" alt="" class="img-7 iconos-azules">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="terminos-condiciones">
+                    <div class="col-sm-6">
+                        <a href="" class="link-citiban">CITIBANAMEX.COM</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="" class="link-terminos">TERMINOSS, CONDICIONES DE USO Y PRIVACIDAD</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row"></div>
+        </div>
+    </div>
+    <!--Modal-->
     
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="modal-mensajes">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <p id="modal-mensaje-p"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="modal-recuperar-usuario">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Ingrese el correo registrado en el banco</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" id="form-recuperar-usuario">
+                    <div class="form-group">
+                        <label class="control-label" for="inputGroupSuccess1">Correo</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">@</span>
+                            <input type="email" id="correo-recuperar-ncliente" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" form="form-recuperar-usuario">Enviar</button>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
