@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos-chat.css">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="raiz">
+        <section class="contenedor-chat">
+            <header class="page-header">
+                <h1 class="text-center">Chat</small></h1>
+            </header>
+            <div class="text-center">
+                <div class="btn-group grupo-botones" role="group">
+                    <button type="button" class="btn btn-default btn-ordenar" id="btn-clientes">Clientes</button>
+                    <button type="button" class="btn btn-default btn-ordenar" id="btn-administradores">Administradores</button>
+                </div>
+            </div>
+            <div class="list-group lista">
+                <!--<a href="#" class="list-group-item item"> Cras justo odio </a>
+                <a href="#" class="list-group-item item">Dapibus ac facilisis in</a>
+                <a href="#" class="list-group-item item">Morbi leo risus</a>
+                <a href="#" class="list-group-item item">Porta ac consectetur ac</a>
+                <a href="#" class="list-group-item item">Vestibulum at eros</a>-->
+            </div>
+        </section>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="modalChat">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="tituloChat"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="contenedorMenajes">
+                        <div class="mensajeRecibido">
+                            hola
+                            <p class="horaMensaje">12:00pm</p>
+                        </div>
+                        <div class="mensajeEnviado">
+                            hola
+                            <p class="horaMensaje">12:10pm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="text" id="texto-mensaje">
+                    <button type="button" class="btn btn-primary" id="btnEnviarMensaje">Enviar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+
+    <script src="../js/jquery-3.2.0.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
