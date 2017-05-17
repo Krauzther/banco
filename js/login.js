@@ -108,8 +108,9 @@ function loginClave(clave) {
             bloqueado = true;
             numeroIntentos = 0;
         } else if (msg.existe ) {
-            //document.location.href = "index.php";
-            mostrarMensaje("Login", "Ir al Dash board.");
+            document.location.href = "perfil.html";
+            //mostrarMensaje("Login", "Ir al Dash board.");
+            
             numeroIntentos = 0;
             bloqueado = false;
         } else {
